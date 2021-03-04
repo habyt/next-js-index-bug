@@ -7,8 +7,9 @@ export default function Home({test}) {
 }
 
 export async function getStaticProps() {
+  await new Promise(resolve => setTimeout(resolve, 30 * 1000))
   return {
-    props: {test: 3},
+    props: {test: 4},
     revalidate: 60
   }
 }
