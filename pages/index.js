@@ -1,9 +1,11 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from "next/link"
 
 export default function Home({test}) {
   console.dir(test)
-  return `Index: ${JSON.stringify(test)}`
+  return <>
+    `Index: ${JSON.stringify(test)}`
+    <Link href="/test" passHref><a>To /[something] </a></Link>
+    </>
 }
 
 export async function getStaticProps() {
