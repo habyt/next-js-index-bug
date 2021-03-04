@@ -1,5 +1,3 @@
-import "dayjs/locale/de"
-import "dayjs/locale/en"
 import React from "react"
 
 
