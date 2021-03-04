@@ -9,26 +9,12 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 })
 const withSourceMaps = require("@zeit/next-source-maps")
 
-
-const publicUrl = (() => {
-    const vercelUrl = process.env.VERCEL_URL
-    if(vercelUrl) return "https://" + vercelUrl
-
-    return config.get("publicUrl")
-})()
-
 const nextConfig = {
     webpack: (webpackConfig, options) => {
         const originalEntry = webpackConfig.entry
         webpackConfig.entry = async () => {
             const entries = await originalEntry()
 
-            if (
-                entries["main.js"] &&
-                !entries["main.js"].includes("./client/polyfills.js")
-            ) {
-                entries["main.js"].unshift("./client/polyfills.js")
-            }
 
             return entries
         }
