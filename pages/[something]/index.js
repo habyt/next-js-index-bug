@@ -11,6 +11,6 @@ export async function getStaticPaths() {
 export async function getStaticProps() {
     return {
         props: {},
-        revalidate: 1
+        revalidate: 60
     }
 }
