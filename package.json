@@ -23,5 +23,8 @@
     "responsive-loader": "^2.3.0",
     "styled-jsx": "^3.3.2",
     "svg-sprite-loader": "^5.2.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.46.0"
   }
 }
