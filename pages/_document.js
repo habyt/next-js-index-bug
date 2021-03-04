@@ -19,9 +19,6 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="en">
-                <Head>{/* your head if needed */}
-                    <GaScripts/>
-                </Head>
                 <body>
                 <div dangerouslySetInnerHTML={{__html: this.props.spriteContent}}/>
                 <Main/>
