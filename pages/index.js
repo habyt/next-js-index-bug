@@ -4,7 +4,8 @@ export default function Home({test}) {
   console.dir(test)
   return <>
     `Index: ${JSON.stringify(test)}`
-    <Link href="/test" passHref><a>To /[something] </a></Link>
+    <Link href="/[something]" as="/test" passHref><a>To /[something] </a></Link>
+    <Link href="/index" passHref><a>To index? </a></Link>
     </>
 }
 
