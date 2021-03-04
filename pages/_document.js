@@ -1,7 +1,6 @@
 import Document, {Head, Html, Main, NextScript} from "next/document"
 import React from "react"
 import sprite from "svg-sprite-loader/runtime/sprite.build"
-import {GaScripts} from "../utils/hooks/useGA"
 import flush from "styled-jsx/server"
 
 export default class MyDocument extends Document {
